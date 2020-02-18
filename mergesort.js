@@ -1,5 +1,4 @@
 function split(wholeArray) {
-  /* your code here to define the firstHalf and secondHalf arrays */
   let firstHalf = [];
   let secondHalf = [];
   let splitIdx = Math.ceil(wholeArray.length / 2);
@@ -24,4 +23,16 @@ function merge(arr1, arr2) {
     finalArray = [...finalArray, ...arr2];
   }
   return finalArray;
+}
+
+function mergeSort(array) {
+  if (array.length === 1) {
+    return array;
+  }
+
+  const [firstHalf, secondHalf] = split(array);
+  console.log('array after first split');
+  let sortedFH = mergeSort(firstHalf);
+  let sortedSH = mergeSort(secondHalf);
+  return merge(sortedFH, sortedSH);
 }

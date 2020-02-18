@@ -20,3 +20,12 @@ describe('Merge function', function() {
     expect(merge([1, 2, 3, 5], [4, 6, 7])).toEqual([1, 2, 3, 4, 5, 6, 7]);
   });
 });
+
+describe('Merge Sort function', function() {
+  it('is able to merge two sorted arrays into one sorted array', function() {
+    // test the merging algorithm
+    // expect(mergeSort([2, 3, 1, 5, 4])).toEqual([1, 2, 3, 4, 5]);
+    expect(mergeSort([4, 2, 1])).toEqual([1, 2, 4]);
+    // expect(mergeSort([2])).toEqual([2]);
+  });
+});
